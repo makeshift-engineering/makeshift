@@ -1,0 +1,137 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 56px 0 40px;
+  background: var(--bg-1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logoIcon {
+  height: 26px;
+  width: auto;
+}
+
+.logoText {
+  font-family: var(--font-mono), monospace;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--fg-0);
+  letter-spacing: -0.03em;
+}
+
+.logoDot {
+  color: var(--accent);
+}
+
+.tagline {
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.6;
+  margin-top: 14px;
+  max-width: 280px;
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  color: var(--fg-2);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--fg-0);
+  background: var(--bg-3);
+}
+
+.colTitle {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--fg-2);
+  margin-bottom: 14px;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linkList a {
+  font-size: 13px;
+  color: var(--fg-2);
+  padding: 4px 0;
+  transition: color var(--transition-fast);
+}
+
+.linkList a:hover {
+  color: var(--fg-0);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  gap: 16px;
+}
+
+.copyright,
+.built {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-3);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
