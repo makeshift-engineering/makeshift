@@ -104,7 +104,7 @@ export default function HeroTerminal() {
       );
     }
 
-    let className = styles.outputLine;
+    const className = styles.outputLine;
     switch (lineData.type) {
       case "heading":
         return (
