@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Makeshift Engineering
 
-## Getting Started
+The public website for [Makeshift Engineering](https://makeshift.pro), a small team of friends building open-source software that matters.
 
-First, run the development server:
+The site showcases our projects, engineering philosophy, and writing. Visit the organisation on [GitHub](https://github.com/makeshift-engineering).
+
+## Tech stack
+
+- [Next.js](https://nextjs.org/) App Router
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- CSS Modules
+- [Bun](https://bun.sh/)
+
+## Development
+
+### Prerequisites
+
+- [Bun](https://bun.sh/docs/installation)
+- Node.js compatible with the installed Next.js version
+
+### Install dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Start the development server
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+### Create a production build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+bun run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To serve the production build locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+bun run start
+```
 
-## Deploy on Vercel
+## Project structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+app/
+├── components/       Reusable site components
+├── globals.css       Global styles and design tokens
+├── layout.tsx        Root layout and site metadata
+├── page.tsx          Homepage
+└── page.module.css   Homepage styles
+public/               Static assets, including the site logo
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+This repository contains the Makeshift Engineering website. If you spot a problem or have an idea for improvement, please open an issue or pull request in [makeshift-engineering/makeshift](https://github.com/makeshift-engineering/makeshift).
+
+Before opening a pull request, run:
+
+```bash
+bun run build
+```
+
+## Related links
+
+- [Makeshift Engineering](https://makeshift.pro)
+- [GitHub organisation](https://github.com/makeshift-engineering)
+- [PenguinDB](https://penguindb.makeshift.pro)
+- [Blog](https://blog.makeshift.pro)
