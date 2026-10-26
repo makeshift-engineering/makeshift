@@ -6,8 +6,8 @@
 
 **The public website for Makeshift Engineering.**
 
-[![Build](https://github.com/makeshift-engineering/makeshift-blog/actions/workflows/build.yml/badge.svg)](https://github.com/makeshift-engineering/makeshift-blog/actions/workflows/build.yml)
-[![Lint & Format](https://github.com/makeshift-engineering/makeshift-blog/actions/workflows/lint.yml/badge.svg)](https://github.com/makeshift-engineering/makeshift-blog/actions/workflows/lint.yml)
+[![Build](https://github.com/makeshift-engineering/makeshift/actions/workflows/build.yml/badge.svg)](https://github.com/makeshift-engineering/makeshift/actions/workflows/build.yml)
+[![Lint & Format](https://github.com/makeshift-engineering/makeshift/actions/workflows/lint.yml/badge.svg)](https://github.com/makeshift-engineering/makeshift/actions/workflows/lint.yml)
 
 </div>
 
