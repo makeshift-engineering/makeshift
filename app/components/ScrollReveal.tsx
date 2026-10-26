@@ -1,9 +1,20 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
-export default function ScrollReveal({ children, className = "", delay = 0 }) {
-  const ref = useRef(null);
+interface ScrollRevealProps {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}
+
+export default function ScrollReveal({
+  children,
+  className = "",
+  delay = 0,
+}: ScrollRevealProps) {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -27,7 +38,7 @@ export default function ScrollReveal({ children, className = "", delay = 0 }) {
     <div
       ref={ref}
       className={`reveal ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: `${delay}ms` } satisfies CSSProperties}
     >
       {children}
     </div>

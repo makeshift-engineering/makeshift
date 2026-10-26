@@ -1,4 +1,6 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Makeshift Engineering — We build things that matter.",
   description:
     "Makeshift Engineering is a small team of friends building open-source projects. From databases to developer tools, we make software that matters.",
@@ -44,9 +46,14 @@ export const metadata = {
   alternates: {
     canonical: "https://makeshift.pro",
   },
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>{children}</body>

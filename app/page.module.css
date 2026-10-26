@@ -48,16 +48,27 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -30px) scale(1.05); }
-  66% { transform: translate(-20px, 20px) scale(0.95); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
 }
 
 .dotGrid {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-image: radial-gradient(circle, var(--fg-3) 0.5px, transparent 0.5px);
+  background-image: radial-gradient(
+    circle,
+    var(--fg-3) 0.5px,
+    transparent 0.5px
+  );
   background-size: 28px 28px;
   opacity: 0.12;
   mask-image: linear-gradient(to bottom, black 40%, transparent 80%);
@@ -101,8 +112,15 @@
 }
 
 @keyframes pulseDot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.85); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
 }
 
 .heroTitle {
@@ -121,7 +139,7 @@
 }
 
 .heroHighlight::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -137,7 +155,9 @@
 }
 
 @keyframes underlineGrow {
-  to { transform: scaleX(1); }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .heroSubtitle {
@@ -284,9 +304,15 @@
   border-radius: 50%;
 }
 
-.cdRed { background: #ef4444cc; }
-.cdYellow { background: #f59e0bcc; }
-.cdGreen { background: #22c55ecc; }
+.cdRed {
+  background: #ef4444cc;
+}
+.cdYellow {
+  background: #f59e0bcc;
+}
+.cdGreen {
+  background: #22c55ecc;
+}
 
 .codeBarTitle {
   font-family: var(--font-mono), monospace;
@@ -352,7 +378,9 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 28px;
-  transition: border-color var(--transition-base), background var(--transition-base);
+  transition:
+    border-color var(--transition-base),
+    background var(--transition-base);
   position: relative;
   overflow: hidden;
 }
@@ -429,7 +457,9 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 28px;
-  transition: border-color var(--transition-base), transform var(--transition-base);
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base);
   height: 100%;
 }
 
@@ -475,7 +505,9 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 28px;
-  transition: border-color var(--transition-base), transform var(--transition-base);
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base);
   height: 100%;
 }
 
