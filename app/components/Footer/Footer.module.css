@@ -60,7 +60,9 @@
   height: 34px;
   border-radius: 8px;
   color: var(--fg-2);
-  transition: color var(--transition-fast), background var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
 }
 
 .socialLink:hover {

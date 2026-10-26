@@ -28,9 +28,15 @@
   border-radius: 50%;
 }
 
-.dotRed { background: #ef4444cc; }
-.dotYellow { background: #f59e0bcc; }
-.dotGreen { background: #22c55ecc; }
+.dotRed {
+  background: #ef4444cc;
+}
+.dotYellow {
+  background: #f59e0bcc;
+}
+.dotGreen {
+  background: #22c55ecc;
+}
 
 .barTitle {
   font-family: var(--font-mono), monospace;
@@ -69,8 +75,13 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .output {

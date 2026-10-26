@@ -3,7 +3,21 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./HeroTerminal.module.css";
 
-const commands = [
+type OutputType =
+  "blank" | "heading" | "muted" | "info" | "project" | "success";
+
+interface OutputLine {
+  text: string;
+  type: OutputType;
+  highlight?: string;
+}
+
+interface Command {
+  cmd: string;
+  output: OutputLine[];
+}
+
+const commands: Command[] = [
   {
     cmd: "cat org-status.txt",
     output: [
@@ -30,14 +44,14 @@ const commands = [
   },
 ];
 
-function sleep(ms) {
+function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 export default function HeroTerminal() {
   const [typedCmd, setTypedCmd] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const [outputLines, setOutputLines] = useState([]);
+  const [outputLines, setOutputLines] = useState<OutputLine[]>([]);
   const [showEndCursor, setShowEndCursor] = useState(false);
   const isRunning = useRef(false);
 
@@ -81,14 +95,16 @@ export default function HeroTerminal() {
     return () => clearTimeout(timer);
   }, []);
 
-  function renderLine(lineData, index) {
+  function renderLine(lineData: OutputLine, index: number) {
     if (lineData.type === "blank") {
-      return <div key={index} className={styles.outputLine}><br /></div>;
+      return (
+        <div key={index} className={styles.outputLine}>
+          <br />
+        </div>
+      );
     }
 
     let className = styles.outputLine;
-    let content;
-
     switch (lineData.type) {
       case "heading":
         return (
@@ -103,11 +119,12 @@ export default function HeroTerminal() {
           </div>
         );
       case "info":
-        const parts = lineData.text.split(lineData.highlight);
+        const highlight = lineData.highlight ?? "";
+        const parts = lineData.text.split(highlight);
         return (
           <div key={index} className={`${className} ${styles.info}`}>
             {parts[0]}
-            <span className={styles.accentText}>{lineData.highlight}</span>
+            <span className={styles.accentText}>{highlight}</span>
             {parts[1] || ""}
           </div>
         );
