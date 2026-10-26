@@ -130,7 +130,7 @@ export default function HomePage() {
           <div className="wrap">
             <ScrollReveal>
               <div className="section-header">
-                <span className="section-eyebrow">// featured</span>
+                <span className="section-eyebrow">&sol;&sol; featured</span>
                 <h2 className="section-title">Our Projects</h2>
                 <p className="section-description">
                   Open-source tools and systems, built with care.
@@ -349,7 +349,7 @@ export default function HomePage() {
           <div className="wrap">
             <ScrollReveal>
               <div className="section-header">
-                <span className="section-eyebrow">// philosophy</span>
+                <span className="section-eyebrow">&sol;&sol; philosophy</span>
                 <h2 className="section-title">How We Work</h2>
               </div>
             </ScrollReveal>
@@ -455,7 +455,7 @@ export default function HomePage() {
           <div className="wrap">
             <ScrollReveal>
               <div className="section-header">
-                <span className="section-eyebrow">// latest</span>
+                <span className="section-eyebrow">&sol;&sol; latest</span>
                 <h2 className="section-title">From the Blog</h2>
                 <p className="section-description">
                   Engineering deep dives, project updates, and things we&apos;ve
